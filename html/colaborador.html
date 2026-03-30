@@ -33,6 +33,40 @@
         <p class="footer-text">MÓDULO DE DEMONSTRAÇÃO DO PIU.CENTER - COLABORADOR</p>
     </main>
 
+    <button class="btn-suporte-flutuante" id="btn-abrir-suporte" title="Precisa de ajuda?">
+        <i class="fa-solid fa-headset"></i>
+    </button>
+
+    <div class="suporte-modal-overlay" id="modal-suporte">
+        <div class="suporte-modal-content">
+            <button class="suporte-fechar" id="btn-fechar-suporte" title="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 style="color: #2C3E50; margin-bottom: 5px; font-weight: 800; font-size: 22px;">Suporte PiuCenter</h3>
+            <p style="font-size: 13px; color: #A0A0A0; margin-bottom: 25px;">Encontrou um erro ou tem alguma dúvida? Fale com o administrador do sistema.</p>
+            
+            <form id="form-suporte">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label class="form-label">TIPO DE PROBLEMA:</label>
+                    <select class="form-select" required>
+                        <option value="" disabled selected>Selecione a categoria...</option>
+                        <option value="erro">Bug / Erro no sistema</option>
+                        <option value="duvida">Dúvida de utilização</option>
+                        <option value="sugestao">Sugestão de melhoria</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label class="form-label">DESCRIÇÃO DO PROBLEMA:</label>
+                    <textarea class="form-textarea" rows="4" placeholder="Detalhe o que aconteceu ou a sua dúvida..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit" style="width: 100%;">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+
     <script src="../js/colaborador.js"></script>
+    <script src="../js/modal.js"></script>
 </body>
 </html>
