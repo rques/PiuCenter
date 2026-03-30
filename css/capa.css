@@ -1,0 +1,148 @@
+/* Importando uma fonte moderna parecida com a da imagem */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+/* Reseta as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fundo branco com gradientes radiais nos cantos para simular o desfoque */
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle at bottom left, rgba(243, 138, 73, 0.4) 0%, transparent 70%),
+        radial-gradient(circle at top right, rgba(231, 199, 80, 0.4) 0%, transparent 70%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    
+    /* Centraliza o card principal na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    overflow: hidden; /* Evita rolagem se o gradiente vazar */
+    
+
+}
+
+
+/* =========================================
+   CARTÃO CENTRAL
+   ========================================= */
+.login-card {
+    background: #ffffff;
+    border-radius: 35px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 100%;
+    max-width: 420px; /* Largura máxima do cartão */
+}
+
+/* Container da logo com fundo arredondado */
+.logo-wrapper {
+    background-color: #FDF3E1; /* Creme claro */
+    border-radius: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 300px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+/* =========================================
+   TIPOGRAFIA
+   ========================================= */
+.title {
+    color: #721C1C; /* Vermelho bordô */
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #A0A0A0; /* Cinza claro */
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+/* Estilo do Botão Branco (Colaborador) */
+.btn-outline {
+    background-color: #ffffff;
+    color: #333333; /* Texto escuro */
+    border: 1.5px solid #F0F0F0; /* Borda cinza bem clara */
+}
+
+.btn-outline i {
+    color: #E68B5C; /* Ícone laranja */
+}
+
+.btn-outline:hover {
+    border-color: #E68B5C;
+    background-color: #FAFAFA;
+}
+
+/* Estilo do Botão Laranja (Técnico) */
+.btn-solid {
+    background-color: #E68B5C; /* Fundo Laranja */
+    color: #ffffff; /* Texto e Ícone Brancos */
+    border: 1.5px solid #E68B5C;
+}
+
+.btn-solid:hover {
+    background-color: #D67A49;
+    border-color: #D67A49;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   RESPONSIVIDADE (Celulares menores)
+   ========================================= */
+@media (max-width: 480px) {
+    .login-card {
+        margin: 20px; /* Dá uma margem da borda da tela no mobile */
+        padding: 40px 25px;
+        border-radius: 25px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+}

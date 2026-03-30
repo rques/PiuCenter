@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiuCenter - Painel do Técnico</title>
+    <link rel="stylesheet" href="../css/painel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../img/foto.png" alt="Logo">
+            <h2>PIU.CENTER</h2>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <i class="fa-regular fa-clipboard"></i> Chamados
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./novo-chamado-tecnico.html" class="nav-link">
+                    <i class="fa-solid fa-plus"></i> Novo Chamado
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="profile-section">
+            <p class="profile-role">TÉCNICO</p>
+            <p class="profile-id" id="user-display">Carregando...</p>
+            <button class="btn-logout" id="btn-sair">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </button>
+        </div>
+    </aside>
+
+   <main class="main-content">
+        <div class="header-section">
+            <h1>Lista de Chamados</h1>
+            </div>
+
+        <div class="chamados-list"></div>
+    </main>
+
+    <script src="../js/painel.js"></script>
+</body>
+</html>

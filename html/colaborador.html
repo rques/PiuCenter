@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiuCenter - Login Colaborador</title>
+    <link rel="stylesheet" href="../css/colaborador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main class="login-card">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-angle-left"></i> VOLTAR
+        </a>
+        
+        <div class="logo-wrapper">
+            <img src="../img/foto.png" alt="Logo PiuCenter" class="logo">
+        </div>
+        
+        <h1 class="title">Login Colaborador</h1>
+        <p class="subtitle">Aceda à sua conta corporativa</p>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label for="matricula">MATRÍCULA</label>
+                <input type="text" id="matricula" name="matricula" placeholder="Digite sua matrícula" autocomplete="off">
+                <span class="error-message" id="error-msg">Matrícula inválida. Use apenas números.</span>
+            </div>
+
+            <button type="submit" class="btn-solid" id="submit-btn">Entrar Agora</button>
+        </form>
+
+        <p class="footer-text">MÓDULO DE DEMONSTRAÇÃO DO PIU.CENTER - COLABORADOR</p>
+    </main>
+
+    <script src="../js/colaborador.js"></script>
+</body>
+</html>

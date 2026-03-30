@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiuCenter - Detalhes da Requisição</title>
+    <link rel="stylesheet" href="../css/painel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../img/foto.png" alt="Logo">
+            <h2>PIU.CENTER</h2>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="painel-tecnico.html" class="nav-link active">
+                    <i class="fa-regular fa-clipboard"></i> Chamados
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="novo-chamado.html" class="nav-link">
+                    <i class="fa-solid fa-plus"></i> Novo Chamado
+                </a>
+            </li>
+         
+        </ul>
+
+        <div class="profile-section">
+            <p class="profile-role">TÉCNICO</p>
+            <p class="profile-id" id="user-display">Carregando...</p>
+            <button class="btn-logout" id="btn-sair">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="header-section">
+            <a href="painel-tecnico.html" class="btn-back" title="Voltar para a lista">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1>Ar condicionado pingando <span class="badge-req">#REQ-0042</span></h1>
+            <span class="status-badge status-aberto" id="badge-status-atual">ABERTO</span>
+        </div>
+
+        <div class="details-container">
+            <div class="details-card">
+                <h3 class="card-title">Dados da Solicitação</h3>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Requisitante</label>
+                        <p>João Silva</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Centro de Custo</label>
+                        <p>PCP Fundição</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Área / Técnico</label>
+                        <p>Manutenção Predial</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Urgência</label>
+                        <p>Média</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Local</label>
+                        <p>Sala 204</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Tipo de Serviço</label>
+                        <p>Manutenção</p>
+                    </div>
+                </div>
+
+                <div class="info-item full-width mt-20">
+                    <label>Descrição do Problema</label>
+                    <div class="desc-box">
+                        <p>O ar condicionado da sala 204 começou a pingar água em cima da mesa de reuniões. Precisamos de manutenção pois está molhando os documentos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <h3 class="card-title">Atualizar Requisição</h3>
+                
+                <form id="form-resposta-tecnico">
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="novo-status" class="form-label">ALTERAR STATUS PARA:</label>
+                            <select id="novo-status" class="form-select status-select-large">
+                                <option value="aberto" selected>Aberto</option>
+                                <option value="andamento">Em Andamento</option>
+                                <option value="concluido">Concluído</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resposta-tecnico" class="form-label">PARECER TÉCNICO / RESPOSTA:</label>
+                        <textarea id="resposta-tecnico" class="form-textarea" rows="4" placeholder="Digite aqui o que foi feito ou o diagnóstico do problema..." required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit" id="btn-salvar-resposta">Salvar Atualização</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/painel.js"></script>
+</body>
+</html>
